@@ -1,16 +1,18 @@
 import "./Card.css";
+import Button from "./Button.jsx";
+import Toggle from "./Toggle.jsx";
 
-function Card({ cardApi }) {
+function Card({ object }) {
   return (
     <>
-      {cardApi.map((object, id) => (
-        <div className="card" key={id}>
-          <h3> {object.name}</h3>
+      <div className="card">
+        <img src={object.logo} />
+        <h3> {object.name}</h3>
 
-          <p> {object.description}</p>
-          {/* <Toggle></Toggle> */}
-        </div>
-      ))}
+        <p> {object.description}</p>
+        <Toggle active={object.active} />
+        <Button text="Remove" />
+      </div>
     </>
   );
 }

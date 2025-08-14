@@ -11,7 +11,6 @@
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  background-color: #050b21;
   max-width: 100%;
 }
 
@@ -33,7 +32,7 @@ h1 {
 }
 
 body {
-  background-color: #050b21;
+  background-color: #091337;
 }
 
 @keyframes logo-spin {

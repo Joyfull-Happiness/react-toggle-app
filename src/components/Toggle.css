@@ -6,13 +6,3 @@
   position: relative;
   cursor: pointer;
 }
-
-.toggle {
-  width: 18px;
-  height: 18px;
-  background-color: #fff;
-  border-radius: 50%;
-  position: absolute;
-  top: 1px;
-  right: 1px;
-}

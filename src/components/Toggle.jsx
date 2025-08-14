@@ -1,5 +1,6 @@
 import Switch from "react-switch";
 import { useState } from "react";
+import "./Toggle.css"; // Import your CSS for styling
 
 export default function Toggle() {
   const [checked, setChecked] = useState(false);

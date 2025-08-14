@@ -1,0 +1,12 @@
+.button {
+  background-color: #1f2535;
+  color: #fff;
+  border: 0.3px solid white;
+  height: 40px;
+  border-radius: 40px;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  display: inline-block;
+}
