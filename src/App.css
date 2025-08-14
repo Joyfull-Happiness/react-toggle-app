@@ -14,8 +14,12 @@
   max-width: 100%;
 }
 
-h1 {
+h2 {
   color: #ffffff;
+}
+.banner {
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .logo {

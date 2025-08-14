@@ -10,7 +10,7 @@ function Card({ object }) {
         <h3> {object.name}</h3>
 
         <p> {object.description}</p>
-        <Toggle active={object.active} />
+        <Toggle activity={object.isActive} />
         <Button text="Remove" />
       </div>
     </>
