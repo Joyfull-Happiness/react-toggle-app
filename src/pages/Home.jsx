@@ -15,7 +15,8 @@ function Home() {
     if (activity === "inactive") return !obj.isActive;
     return true;
   });
-
+  // move useState and halde change from toogle to here and then pass it
+  // through to the toggle
   return (
     <>
       <div className="banner">

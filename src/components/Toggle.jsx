@@ -11,7 +11,7 @@ export default function Toggle({ activity, onToggle }) {
   return (
     <>
       <label className="toggle">
-        <Switch onChange={onToggle} checked={activity ? true : false} />
+        <Switch onChange={onToggle} checked={activity} />
       </label>
       <p style={{ color: activity ? "green" : "red" }}>
         <span> {activity ? "active" : "inactive"} </span>
