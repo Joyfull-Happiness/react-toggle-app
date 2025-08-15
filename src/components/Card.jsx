@@ -2,7 +2,7 @@ import "./Card.css";
 import Button from "./Button.jsx";
 import Toggle from "./Toggle.jsx";
 
-function Card({ object }) {
+function Card({ object, toggleChange, toggleChecked }) {
   return (
     <>
       <div className="card">
@@ -10,7 +10,12 @@ function Card({ object }) {
         <h3> {object.name}</h3>
 
         <p> {object.description}</p>
-        <Toggle activity={object.isActive} />
+        <Toggle
+          activity={object.isActive}
+          // i need to pass through an id as another prop (ie  activity={object.isActive} )
+          handleChange={toggleChange}
+          checked={toggleChecked}
+        />
         <Button text="Remove" />
       </div>
     </>

@@ -6,16 +6,18 @@ import React, { useState } from "react";
 function Home() {
   const [dataApi, setDataApi] = useState(data);
   const [activity, setActivity] = useState("all");
+  const [checked, setChecked] = useState(true);
 
-  // create an function that updates isactive key
-  // based on your ha change from your toggle
+  function handleChange(checked) {
+    setChecked(checked);
+  }
 
   const filterCards = dataApi.filter((obj) => {
     if (activity === "active") return obj.isActive;
     if (activity === "inactive") return !obj.isActive;
     return true;
   });
-  // move useState and halde change from toogle to here and then pass it
+  // move useState and handle change from toogle to here and then pass it
   // through to the toggle
   return (
     <>
@@ -31,7 +33,12 @@ function Home() {
       {/* <Button text="Active" /> */}
       <div className="card-container">
         {filterCards.map((object, id) => (
-          <Card object={object} key={id} />
+          <Card
+            object={object}
+            key={id}
+            toggleChange={handleChange}
+            toggleChecked={checked}
+          />
         ))}
       </div>
     </>
