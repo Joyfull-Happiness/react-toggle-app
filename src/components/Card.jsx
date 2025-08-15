@@ -11,8 +11,9 @@ function Card({ object, toggleChange, toggleChecked }) {
 
         <p> {object.description}</p>
         <Toggle
-          activity={object.isActive}
+          card={object.name}
           // i need to pass through an id as another prop (ie  activity={object.isActive} )
+          activity={object.isActive}
           handleChange={toggleChange}
           checked={toggleChecked}
         />
