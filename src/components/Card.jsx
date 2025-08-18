@@ -9,6 +9,13 @@ function Card({ object, id, updateData }) {
     updateData(id, nextChecked);
     setChecked(nextChecked);
   };
+
+  // const handleRemoveBtn = ({ remove }) => {
+
+  //   if (removeBtn === click) {
+  //       return { delete item };
+  // };
+
   return (
     <>
       <div className="card">
