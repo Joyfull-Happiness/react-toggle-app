@@ -3,18 +3,12 @@ import React, { useState } from "react";
 import Button from "./Button.jsx";
 import Toggle from "./Toggle.jsx";
 
-function Card({ object, id, updateData }) {
+function Card({ object, id, updateData, onRemove }) {
   const [checked, setChecked] = useState(false);
   const handleToggleChange = (nextChecked) => {
     updateData(id, nextChecked);
     setChecked(nextChecked);
   };
-
-  // const handleRemoveBtn = ({ remove }) => {
-
-  //   if (removeBtn === click) {
-  //       return { delete item };
-  // };
 
   return (
     <>
@@ -29,7 +23,7 @@ function Card({ object, id, updateData }) {
           toggleChange={handleToggleChange}
           id={id}
         />
-        <Button text="Remove" />
+        <Button text="Remove" onClick={onRemove} />
       </div>
     </>
   );

@@ -32,6 +32,9 @@ function Home() {
     return true;
   });
 
+  function removeCard(id) {
+    setDataApi((prevData) => prevData.filter((item) => item.id !== id));
+  }
   // move useState and handle change from toogle to here and then pass it
   // through to the toggle
   return (
@@ -58,6 +61,7 @@ function Home() {
             id={object.id}
             key={object.id}
             updateData={handleChange}
+            onRemove={() => removeCard(object.id)}
           />
         ))}
       </div>
