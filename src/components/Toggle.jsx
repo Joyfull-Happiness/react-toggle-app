@@ -1,11 +1,11 @@
 import Switch from "react-switch";
 import "./Toggle.css"; // Import your CSS for styling
 
-export default function Toggle({ activity, handleChange, checked }) {
+export default function Toggle({ activity, toggleChange }) {
   return (
     <>
       <label className="toggle">
-        <Switch onChange={handleChange} checked={checked} />
+        <Switch onChange={toggleChange} checked={activity ? true : false} />
       </label>
       <p style={{ color: activity ? "green" : "red" }}>
         <span> {activity ? "active" : "inactive"} </span>
@@ -13,3 +13,4 @@ export default function Toggle({ activity, handleChange, checked }) {
     </>
   );
 }
+/* in toggle we only have two props.  */

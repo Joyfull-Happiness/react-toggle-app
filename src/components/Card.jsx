@@ -1,8 +1,14 @@
 import "./Card.css";
+import React, { useState } from "react";
 import Button from "./Button.jsx";
 import Toggle from "./Toggle.jsx";
 
-function Card({ object, toggleChange, toggleChecked }) {
+function Card({ object, id, updateData }) {
+  const [checked, setChecked] = useState(false);
+  const handleToggleChange = (nextChecked) => {
+    updateData(id, nextChecked);
+    setChecked(nextChecked);
+  };
   return (
     <>
       <div className="card">
@@ -11,11 +17,10 @@ function Card({ object, toggleChange, toggleChecked }) {
 
         <p> {object.description}</p>
         <Toggle
-          card={object.name}
-          // i need to pass through an id as another prop (ie  activity={object.isActive} )
+          /* below we are connecting the toggle to the data */
           activity={object.isActive}
-          handleChange={toggleChange}
-          checked={toggleChecked}
+          toggleChange={handleToggleChange}
+          id={id}
         />
         <Button text="Remove" />
       </div>
