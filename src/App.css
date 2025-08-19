@@ -14,9 +14,6 @@
   max-width: 100%;
 }
 
-h2 {
-  color: #ffffff;
-}
 .banner {
   flex-direction: row;
   flex-wrap: wrap;
@@ -34,31 +31,40 @@ h2 {
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
+body.light .card-container {
+  background: white;
+  color: black;
+}
+
+body.dark .card-container {
+  background: #111;
+  color: white;
+}
+
+body.light .banner {
+  background: white;
+  color: black;
+}
+
+body.dark .banner {
+  background: #111;
+  color: white;
+}
+body.light .button {
+  background: white;
+  color: black;
+  border-color: #091337;
+}
+body.dark .button {
+  background: #111;
+  color: white;
+}
 
 body {
   background-color: #091337;
 }
 /* Light mode */
-.light {
-  background-color: white;
-  color: black;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
 
-/* Dark mode */
-.dark {
-  background-color: #111;
-  color: white;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);

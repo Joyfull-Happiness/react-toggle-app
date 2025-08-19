@@ -42,7 +42,7 @@ function Home() {
     <>
       <div className="banner">
         <h2>Extensions List</h2>
-        <ThemeToggle />
+        <ToggleLightMode />
         <Button onClick={() => setActivity("active")} text="Active"></Button>
         <Button
           onClick={() => setActivity("inactive")}

@@ -11,7 +11,17 @@
   justify-content: space-between;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
+body.light .card {
+  background: #f6f6f6;
+  border: 1px solid #ddd;
+  color: black;
+}
 
+body.dark .card {
+  background: #1f2535;
+  border: 1px solid #333;
+  color: white;
+}
 img {
   max-block-size: 100px;
   display: inline-block;

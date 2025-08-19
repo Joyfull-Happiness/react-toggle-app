@@ -1,13 +1,16 @@
-import { useState } from "react";
-import "./App.css";
+import { useState, useEffect } from "react";
+import "../App.css";
 
-export default function ThemeToggle() {
+export default function ToggleLightMode() {
   const [darkMode, setDarkMode] = useState(false);
 
+  useEffect(() => {
+    document.body.className = darkMode ? "dark" : "light";
+  }, [darkMode]);
+
   return (
-    <div className={darkMode ? "dark" : "light"}>
-      <h1>{darkMode ? "Dark Mode" : "Light Mode"}</h1>
-      <button onClick={() => setDarkMode(!darkMode)}>Toggle Theme</button>
-    </div>
+    <button onClick={() => setDarkMode(!darkMode)}>
+      {darkMode ? "Switch to Light" : "Switch to Dark"}
+    </button>
   );
 }
