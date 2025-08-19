@@ -1,6 +1,7 @@
 import data from "../data.js";
 import Button from "../components/Button.jsx";
 import Card from "../components/Card.jsx";
+import ToggleLightMode from "../components/ToggleLightMode.jsx";
 import React, { useState } from "react";
 
 function Home() {
@@ -41,6 +42,7 @@ function Home() {
     <>
       <div className="banner">
         <h2>Extensions List</h2>
+        <ThemeToggle />
         <Button onClick={() => setActivity("active")} text="Active"></Button>
         <Button
           onClick={() => setActivity("inactive")}
