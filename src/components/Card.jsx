@@ -13,17 +13,23 @@ function Card({ object, id, updateData, onRemove }) {
   return (
     <>
       <div className="card">
-        <img src={object.logo} />
-        <h3> {object.name}</h3>
+        <div className="imageHeadderWrapper">
+          <img src={object.logo} />
+          <div>
+            <h3> {object.name}</h3>
 
-        <p> {object.description}</p>
-        <Toggle
-          /* below we are connecting the toggle to the data */
-          activity={object.isActive}
-          toggleChange={handleToggleChange}
-          id={id}
-        />
-        <Button text="Remove" onClick={onRemove} />
+            <p> {object.description}</p>
+          </div>
+        </div>
+        <div className="toggleButtonWrapper">
+          <Button text="Remove" onClick={onRemove} />
+          <Toggle
+            /* below we are connecting the toggle to the data */
+            activity={object.isActive}
+            toggleChange={handleToggleChange}
+            id={id}
+          />
+        </div>
       </div>
     </>
   );

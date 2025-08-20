@@ -5,11 +5,14 @@ export default function Toggle({ activity, toggleChange }) {
   return (
     <>
       <label className="toggle">
-        <Switch onChange={toggleChange} checked={activity ? true : false} />
+        <Switch
+          onChange={toggleChange}
+          checked={activity ? true : false}
+          uncheckedIcon={false}
+          checkedIcon={false}
+        />
       </label>
-      <p style={{ color: activity ? "green" : "red" }}>
-        <span> {activity ? "active" : "inactive"} </span>
-      </p>
+      <p style={{ color: activity ? "green" : "red" }}></p>
     </>
   );
 }
